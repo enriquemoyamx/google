@@ -1,0 +1,141 @@
+:root {
+  --color-shark: #202124;
+  --color-shuttle-gray: #5f6368;
+  --color-gray-chateau: #9aa0a6;
+  --color-rolling-stone: #70757a;
+  --color-gallery: #f0f0f0;
+  --color-iron: #dfe1e5;
+  --color-athens-gray: #f8f9fa;
+  --color-white: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Segoe UI", "Helvetica Neue", Helvetica, Cantarell, Ubuntu, Roboto, Noto,
+    Arial, sans-serif;
+  --fontsize-m: 0.875rem;
+}
+
+body {
+  background-color: var(--color-white);
+  font-size: var(--fontsize-m);
+}
+
+.navbar {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__links--right,
+.navbar__links--left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.navbar__link {
+  color: var(--color-shark);
+}
+
+.navbar__link:hover {
+  text-decoration: underline;
+}
+
+.menu-icon {
+  color: var(--color-shuttle-gray);
+}
+
+.navbar__profile-pic {
+  border-radius: 50%;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 0 1em;
+}
+
+.main__searchbar {
+  border: 1px solid var(--color-iron);
+  border-radius: 100px;
+  height: 48px;
+  max-width: 584px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 1em;
+  padding: 0 1em;
+}
+
+.main__searchbar:hover {
+  box-shadow: 0 1px 5px rgba(32, 33, 36, 0.28);
+  border-color: transparent;
+}
+
+.magny-icon {
+  color: var(--color-gray-chateau);
+}
+
+.main__input,
+.main__input:focus {
+  border: none;
+  outline: none;
+}
+
+.main__buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.main__button {
+  padding: 0.5em 1.25em;
+  border: 1px solid transparent;
+  border-radius: 0.25em;
+  background-color: var(--color-athens-gray);
+}
+
+.main__button:hover {
+  border: 1px solid #dadce0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+  width: 100%;
+  justify-items: center;
+  gap: 2em;
+  background-color: var(--color-gallery);
+}
+
+.footer__links,
+.footer__carbon-free {
+  display: flex;
+  gap: 1em;
+}
+
+.footer__link {
+  color: var(--color-rolling-stone);
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 780px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
